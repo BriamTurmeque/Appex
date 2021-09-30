@@ -1,6 +1,7 @@
 //en este archivo le hice una modificacion a la clase base que esta vacio, la inicialice con los datos vacios, no nulos
 //tambien modifique el tipo de dato de tipoEmpresa y estadoEmpresa, en vez de boolean los deje string, para simplificar el codigo y tener un mejor entendimiento de este.
-  
+//ademas toco modificar los gets and setter de estos, para que queden acuerdo al tipo de datos 
+
 package logica;
 
 /*
@@ -131,10 +132,17 @@ public class Empresa {
     }
 
     public boolean isEstadoEmpresa() {
-        return estadoEmpresa;
+        boolean estado_Empresa ;
+        if (estadoEmpresa == "natural"){
+            estado_Empresa = false;
+        }
+        else {
+            estado_Empresa = true;
+        }
+        return estado_Empresa;
     }
 
-    public void setEstadoEmpresa(boolean estadoEmpresa) {
+    public void setEstadoEmpresa(String estadoEmpresa) {
         this.estadoEmpresa = estadoEmpresa;
     }
 
@@ -155,4 +163,4 @@ public class Empresa {
     }
     
 }
- 
+    
